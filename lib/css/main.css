@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /*font-family: 'Itim', cursive;*/
+  width: 100%;
+  height: 100%;
+  /*font-family: 'Julius Sans One', sans-serif;*/
+  /*font-family: 'Pompiere', cursive;*/
+  /*font-family: 'Six Caps', sans-serif;*/
+  /*font-family: 'Fontdiner Swanky', cursive;*/
+  /*font-family: 'Qwigley', cursive;*/
+  font-family: 'Share Tech Mono', monospace;
+
+  /*letter-spacing: 4px;*/
+}
+
+.location-list {
+  text-align: center;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+ }
+
+.menu {
+  color: #333;
+  background: #48E5C2;
+  position: fixed;
+  left: 3%;
+  top: 12.5%;
+  width: 15%;
+  height: 75%;
+  margin: 0;
+  z-index: 1000;
+}
+
+.menu ul {
+  color: #FCFAF9;
+  /*background: #48E5C2;*/
+  background: #333;
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  border-top: 2px solid #37B297;
+  width: 100%:
+  margin: 0;
+  font-size: 1.7em;
+  padding: 3%;
+  cursor: pointer;
+}
+
+.menu ul li:last-child {
+  border-bottom: 2px solid #37b297;
+}
+
+.menu input {
+  /*display: inline-block;*/
+  width: 85%;
+  margin: 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 750px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+  }
+
+  .menu input {
+
+  }
+}

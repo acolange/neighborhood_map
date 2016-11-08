@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="lib/css/main.css">
   <!-- <link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Itim|Julius+Sans+One|Pompiere|Qwigley|Six+Caps" rel="stylesheet"> -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3p7qqSBoO8I6HzWiZo0alAO93lOqIcOw&callback=gmap.initMap" charset="utf-8" sync defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3p7qqSBoO8I6HzWiZo0alAO93lOqIcOw&callback=viewModel" charset="utf-8" sync defer></script>
 </head>
 <body>
 
   <div class="menu">
     <div class="search">
       <input type="text">
+      <input type="submit" name="name" value="Go">
     </div>
     <h2 class="location-list">Locations</h2>
     <ul class="locations" data-bind="foreach: pointList">
@@ -26,7 +27,8 @@
 
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
   <script src="bower_components/knockout/dist/knockout.js" charset="utf-8"></script>
-  <script src="lib/js/map.js" charset="utf-8"></script>
+  <script src="lib/js/locations.js" charset="utf-8"></script>
+  <!-- <script src="lib/js/map.js" charset="utf-8"></script> -->
   <script src="lib/js/app.js" charset="utf-8"></script>
 
   <!-- <script src="http://maps.google.com/maps/api/js"

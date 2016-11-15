@@ -5,17 +5,9 @@
 body {
   margin: 0;
   padding: 0;
-  /*font-family: 'Itim', cursive;*/
   width: 100%;
   height: 100%;
-  /*font-family: 'Julius Sans One', sans-serif;*/
-  /*font-family: 'Pompiere', cursive;*/
-  /*font-family: 'Six Caps', sans-serif;*/
-  /*font-family: 'Fontdiner Swanky', cursive;*/
-  /*font-family: 'Qwigley', cursive;*/
-  font-family: 'Share Tech Mono', monospace;
-
-  /*letter-spacing: 4px;*/
+  font-family: 'Josefin Sans', arial;
 }
 
 .location-list {
@@ -27,13 +19,22 @@ body {
   width: 100%;
  }
 
+ #yelp-result {
+   background: #fff;
+   position: fixed;
+   right: 3%;
+   width: 25%;
+   height: 100%;
+   z-index: 999;
+ }
+
 .menu {
   color: #333;
   background: #48E5C2;
   position: fixed;
   left: 3%;
   top: 12.5%;
-  width: 15%;
+  width: 20%;
   height: 75%;
   margin: 0;
   z-index: 1000;
@@ -49,6 +50,7 @@ body {
 
 .menu ul li {
   border-top: 2px solid #37B297;
+  background: #333;
   width: 100%:
   margin: 0;
   font-size: 1.7em;
@@ -60,7 +62,12 @@ body {
   border-bottom: 2px solid #37b297;
 }
 
-.menu input {
+.menu ul li:hover {
+  transform: scale(1.1);
+  border-top: 2px solid #333;
+}
+
+.menu input[type=text] {
   /*display: inline-block;*/
   width: 85%;
   margin: 10px 15px;

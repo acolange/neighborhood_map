@@ -63,7 +63,7 @@ body {
 }
 
 .menu ul li:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   border-top: 2px solid #333;
 }
 

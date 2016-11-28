@@ -26,7 +26,7 @@
   <div id="map"></div>
 
   <script type="text/html" id="location">
-    <li data-bind="text: locationName"></li>
+    <li data-bind="{click: gmap.showInfo, text: locationName}"></li>
   </script>
 
   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>

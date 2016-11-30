@@ -10,18 +10,16 @@
 </head>
 <body>
 
-  <div class="menu">
+  <header>
     <div class="search-box">
       <input type="search" data-bind="value: locSearch, valueUpdate: 'keyup'">
-      <input type="submit" name="name" value="Go">
     </div>
+  </header>
+
+  <div class="menu">
     <h2 class="location-list">Locations</h2>
-
     <ul class="locations" data-bind="template: {name: 'location', foreach: filterPoints}"></ul>
-
   </div>
-
-
 
   <div id="map"></div>
 

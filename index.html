@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
-
+  <div class="loadError"></div>
   <header>
     <h1>Good Restaurants at Desert Ridge</h1>
     <div class="search-box">
@@ -32,10 +32,10 @@
   <script src="bower_components/knockout/dist/knockout.js" charset="utf-8"></script>
   <script src="bower_components/oauth-signature/dist/oauth-signature.js" charset="utf-8"></script>
   <script src="lib/js/locations.js" charset="utf-8" ></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3p7qqSBoO8I6HzWiZo0alAO93lOqIcOw" charset="utf-8" sync></script>
   <script src="lib/js/map.js" charset="utf-8"></script>
   <script src="lib/js/yelp.js" charset="utf-8"></script>
   <script src="lib/js/app.js" charset="utf-8"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3p7qqSBoO8I6HzWiZo0alAO93lOqIcOw&callback=initMap" onerror="mapFail()" charset="utf-8"></script>
 
 </body>
 </html>

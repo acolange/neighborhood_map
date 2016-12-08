@@ -1,41 +1,41 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Good Restaurants at Desert Ridge</title>
-  <link rel="stylesheet" href="lib/css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-</head>
-<body>
-  <div class="loadError"></div>
-  <header>
-    <h1>Good Restaurants at Desert Ridge</h1>
-    <div class="search-box">
-      <input type="search" data-bind="value: locSearch, valueUpdate: 'keyup'">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Good Restaurants at Desert Ridge</title>
+    <link rel="stylesheet" href="lib/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <div class="loadError"></div>
+    <header>
+      <h1>Good Restaurants at Desert Ridge</h1>
+      <div class="search-box">
+        <input type="search" data-bind="textInput: locSearch">
+      </div>
+    </header>
+
+    <div class="menu">
+      <h2 class="location-list">Locations</h2>
+      <ul class="locations" data-bind="template: {name: 'location', foreach: filterPoints}"></ul>
     </div>
-  </header>
 
-  <div class="menu">
-    <h2 class="location-list">Locations</h2>
-    <ul class="locations" data-bind="template: {name: 'location', foreach: filterPoints}"></ul>
-  </div>
+    <div id="holder"><div id="map"></div></div>
 
-  <div id="map"></div>
+    <script type="text/html" id="location">
+      <li data-bind="{click: gmap.showInfo, text: locationName}"></li>
+    </script>
 
-  <script type="text/html" id="location">
-    <li data-bind="{click: gmap.showInfo, text: locationName}"></li>
-  </script>
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="bower_components/knockout/dist/knockout.js" charset="utf-8"></script>
+    <script src="bower_components/oauth-signature/dist/oauth-signature.js" charset="utf-8"></script>
+    <script src="lib/js/locations.js" charset="utf-8" ></script>
+    <script src="lib/js/map.js" charset="utf-8"></script>
+    <script src="lib/js/yelp.js" charset="utf-8"></script>
+    <script src="lib/js/app.js" charset="utf-8"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3p7qqSBoO8I6HzWiZo0alAO93lOqIcOw&callback=initMap" onerror="mapFail()" charset="utf-8" async defer></script>
 
-  <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
-  <script src="bower_components/knockout/dist/knockout.js" charset="utf-8"></script>
-  <script src="bower_components/oauth-signature/dist/oauth-signature.js" charset="utf-8"></script>
-  <script src="lib/js/locations.js" charset="utf-8" ></script>
-  <script src="lib/js/map.js" charset="utf-8"></script>
-  <script src="lib/js/yelp.js" charset="utf-8"></script>
-  <script src="lib/js/app.js" charset="utf-8"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3p7qqSBoO8I6HzWiZo0alAO93lOqIcOw&callback=initMap" onerror="mapFail()" charset="utf-8"></script>
-
-</body>
+  </body>
 </html>

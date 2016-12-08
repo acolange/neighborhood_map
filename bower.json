@@ -1,0 +1,28 @@
+{
+  "name": "Neighborhood Map Project",
+  "description": "Udacity FSND Neighborhood map project",
+  "main": "app.js",
+  "authors": [
+    "A.J. Colangelo"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Knockout",
+    "jQuery",
+    "Google",
+    "Maps"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "knockout": "^3.4.0",
+    "oauth-signature": "^1.3.1"
+  }
+}
